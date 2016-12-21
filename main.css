@@ -1,0 +1,185 @@
+#title{
+    width: auto;
+    height: 50;
+    padding: 5px;
+    font-family: cursive;
+    font-size: 20;
+    text-align: center;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+#fig1{
+    float: center;
+}
+
+#camera_list{
+    font-family: cursive;
+    font-size: 10;
+    float: left;
+    background-color: bisque;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+.domain{
+    fill: none;
+    stroke: #000
+}
+
+.tick{
+    font-size:12
+}
+.tick line{
+    stroke: #000
+}
+
+
+.x_axis_fig2 {
+  font: 10px sans-serif;
+}
+
+.x_axis_fig2 path,
+.x_axis_fig2 line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x_axis_fig2 path {
+  display: block;
+}
+
+div#container1 {
+    height: 550px;
+    width: 640px;
+    border:1px solid #555555;
+    overflow-y: scroll;
+    overflow-x: none;
+/*    float:right;*/
+    position: absolute;
+    top: 95px;
+    left: 850px;
+}
+
+#svg_fig2#svg {
+    display: block;
+    margin-top: -1200px;
+    float: top;
+    height: 100px;
+    width: 1100px;
+    border:1px dotted #ccc;
+    background-color: #ccc;
+}
+
+#xAxisCont {
+    position: absolute;
+    top: 646px;
+    left: 5488px;
+/*    float: left;*/
+    font-size: 13px;
+    color: #424242;
+    font-family: 'Open Sans regular', 'Open Sans';
+    width: 900;
+    direction: rtl;
+    float: right;
+}
+
+#tooltip_fig2 {
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    padding: 8px;
+    z-index: 100;
+    font: 10px sans-serif;
+    background: #ddd;
+    border: solid 1px #aaa;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+path { 
+    stroke-width: 1;
+    fill: none;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.whisker line,
+.median line,
+.box rect, {
+  fill: #ffffff;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+circle {
+  shape-rendering: crispEdges;
+  opacity: 0.7;
+}
+
+circle:hover {
+/*  fill: red;*/
+  stroke: red;
+  opacity: 1;
+}
+
+.outlier {
+  stroke: none;
+  stroke-width: 2px;
+}
+
+.point {  
+  opacity: 0.7; 
+}
+
+.axis path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.axis line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.axis text {    
+    font-size: 10px;
+}
+
+#svg_fig4E {
+    position: absolute;
+    left : 850px;
+    float : left
+}
+
+#svg_fig4B {
+    position: absolute;
+    top:   720px;
+    left : 850px;
+    float : left
+}
+
+#svg_fig4Q {
+    position: absolute;
+    left : 850px;
+    top : 790px;
+    float : left
+}
+
+#svg_fig4F {
+    position: absolute;
+    left : 850px;
+    top : 860px;
+    float : left
+}

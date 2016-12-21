@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title> Camera Models and their distribution </title>
+<!--        <script src="http://d3js.org/d3.v3.min.js"> </script>-->
+        <script src="d3.v3.min.js"> </script>
+        <script src = "functions.js"> </script> 
+        <script src = "fig1.js"> </script> 
+        <script src = "fig2.js"> </script>
+        <script src = "fig3.js"> </script>
+        <script src = "fig4.js"> </script>
+        
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div id="title" > Camera Models and their distribution<br>Image Exif Project(Group-6) </div>
+        <div>
+            <svg id="fig1"> </svg>
+        </div>
+        
+    </body>
+
+    
+    <script>
+        var min_year = 2020, max_year = -1, max_elem = 0;
+        d3.json("figure1_filt50.json", function(error, data){
+            render(data); 
+        })
+        
+        data = [];
+        cams = {}
+        
+        var fig1 = d3.select("#fig1");
+        
+        function render(data){
+            preprocessing(data);
+            render_fig1(data, fig1, min_year, max_year, max_elem);
+            render_fig2(cams);
+            render_fig3();
+            render_fig4();
+        }
+    
+        var preprocessing = (function(data) {
+            var executed = false;
+            return function (data){
+                if (!executed) {
+                    executed = true;
+                    for (var i = 0; i < data.length; i++){
+                        var arr = data[i].mm.toLowerCase().split(';')
+                        
+                        var total = sumd(data[i]['year']);
+                        if(total > 50){
+                            if (!(arr[0] in cams)){
+                                cams[arr[0]] = {};
+                                cams[arr[0]]['count'] = total
+                                cams[arr[0]]['model'] = {}
+                            }
+                            else{
+                                cams[arr[0]]['count'] += total;
+                            }
+                            
+                            if(!(arr[1] in cams[arr[0]]['model'])){
+                                cams[arr[0]]['model'][arr[1]] = total;
+                            }
+                        } 
+
+                        var year = data[i].year;
+                        for (var j = 0; j < year.length; j++){
+                            
+                            var intyear = year[j]['x'];
+                            if(intyear > max_year && intyear < 2015)
+                                max_year=intyear;
+                            if(intyear < min_year && intyear > 1999)
+                                min_year = intyear;
+                            if(year[j]['y'] > max_elem)
+                                max_elem = year[j]['y'];
+                        }
+                    }
+                    for (var i = 0; i < data.length; i++){
+                        var year = data[i].year;
+                        for (var j = 0; j < year.length; j++){
+                            if(year[j]['x'] < min_year-1 || year[j]['x'] > max_year+1)
+                                year.splice(j,1)
+                        }
+                        if(year.length == 0)
+                            data.splice(i,1)
+                        data[i].year = sort_wrt_year(data[i].year);
+                    }
+                    
+                    this.data = data; 
+                }
+            };
+        })();
+
+        
+    </script>
+    
+    
+    
+    
+    
+</html>
