@@ -62,7 +62,7 @@ div#container1 {
 /*    float:right;*/
     position: absolute;
     top: 95px;
-    left: 850px;
+    left: 710px;
 }
 
 #svg_fig2#svg {
@@ -77,8 +77,8 @@ div#container1 {
 
 #xAxisCont {
     position: absolute;
-    top: 646px;
-    left: 5488px;
+    top: 647px;
+    left: 408px;
 /*    float: left;*/
     font-size: 13px;
     color: #424242;
@@ -159,27 +159,27 @@ circle:hover {
 
 #svg_fig4E {
     position: absolute;
-    left : 850px;
+    left : 710px;
     float : left
 }
 
 #svg_fig4B {
     position: absolute;
     top:   720px;
-    left : 850px;
+    left : 720px;
     float : left
 }
 
 #svg_fig4Q {
     position: absolute;
-    left : 850px;
+    left : 710px;
     top : 790px;
     float : left
 }
 
 #svg_fig4F {
     position: absolute;
-    left : 850px;
+    left : 710px;
     top : 860px;
     float : left
 }

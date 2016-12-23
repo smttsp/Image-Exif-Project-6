@@ -11,7 +11,7 @@ function render_fig1(data, fig1, min_year, max_year, max_elem){
             .style("color", "#fff")
             .style("opacity", 0.7)
 
-    var marg = {left: 24, top: 20, right:20, bottom:20};
+    var marg = {left: 25, top: 20, right:20, bottom:20};
     var width = 700, height = 600;
 
     var fig1dotg = fig1.append("g")
