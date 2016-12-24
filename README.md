@@ -5,7 +5,7 @@ Samet Taspinar,
 Piyush Chaudhary,
 Rewa Jayant Kale
 
-#Description 
+#Project Description 
 This project provides visualization for the trends in camera brand/model usage in Abu Dhabi. The exif header of 1.4M images are obtained from Flickr and based on those exif data, we visualized and tried to understand more of the trends.
 
 This project provides answers for the following questions:
@@ -13,7 +13,7 @@ This project provides answers for the following questions:
   - What are the most popular settings for cameras (resolution, brightness, white balance)?
   - What are the most popular brands?
 
-#File Descriptions
+#Files
 This project consist of one .html file, one .css file and 5 .js files. Along with these, we summarized the data in a .json file and 5 .csv files that contains only the information we needed for the project. 
 
 main.html is the main file from which we create the page and main.css contains the styles that make the page visually engaging. main.html also contains preprocessing function which reads whole figure1_filt50.json and stackeddata.csv only once when the page is opened and never re-opens it. This helps us not to read the files over and over again.
